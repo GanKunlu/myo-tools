@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# @author: Gan, 2016/10/26
 import numpy as np
 class FeatureExtractor(object):
 	'''A class contains some feature extraction mehod
