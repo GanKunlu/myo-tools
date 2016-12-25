@@ -77,3 +77,27 @@
 
 *creatFeatName(nameList,channels)*: 为生成的特征样本进行构造命名，namelist: 特征名列表; channels: 通道名列表
 
+
+### 3. tools.Myplot
+#### DataPlotter 针对信号特征分析的绘图类，基于pandas数据结构，以及matplotlib和seaborn绘图工具包：
+
+**class tools.Myplot.DataPlotter（data, columns, subNum = -1）**
+
+**Parameter:**
+
+*data*: numpyArray 要绘制的数据，将以列为区分绘图，每列为同一个特征的数据
+
+*columns*: [string,string,...] 数据的命名
+
+*subNum*: 如果使用subplot需填写subplot的标志数字如431代表按4行3列进行分图，不填默认为-1，即不进行subplot
+
+**Method:**
+
+*plot(selectcol, xylabel=[], ls='-', lw=1 )*: 绘制单个图，selectol为要绘制的数据名组成的列表; xylabel为x和y坐标轴名字,默认无，格式为['X_name',u'Y—名字], 注意用到中文是字符串应为Unicode形，即前面应加上u; ls为线形，默认实线，可以设置selectcol中对应位置的数据的线形，以列表形式输入; lw为线的粗细，默认1，用法同ls
+
+*legend()*: 对绘制的图添加图例
+
+*subplot(number, selectcol, xylabel = [],ls='-',lw=1 )*: 绘制分图，
+*number*: matpltlib中subplot的当前分图标志数，可以输入int如：431，也可输入list如[4,3,1], 表示绘制4行3列的分图，目前绘制第一个;  selectcol,xylabel,ls,lw的用法同plot
+
+*newSubplot(self,number,data,color = 0, label = '', xylabel = [],ls='-',lw=1)*:绘制含有新数据的分图，当需要在某个子图中绘制类对象中为存储的数据是可用。
