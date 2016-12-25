@@ -1,3 +1,4 @@
+# @author:Gan 	Date:2016/12
 from tools.reader import *
 from tools.featureExtract import FeatureExtractor
 import os
