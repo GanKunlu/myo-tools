@@ -39,7 +39,7 @@ class FilesReader(object):
 	def files(self):
 		return self.fileList
 		
-	@property	
+	@property
 	def allFilesData(self):
 		matList = []
 		for fileIndex, fileName in enumerate(self.fileList):
