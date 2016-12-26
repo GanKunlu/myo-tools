@@ -100,4 +100,4 @@
 *subplot(number, selectcol, xylabel = [],ls='-',lw=1 )*: 绘制分图，
 *number*: matpltlib中subplot的当前分图标志数，可以输入int如：431，也可输入list如[4,3,1], 表示绘制4行3列的分图，目前绘制第一个;  selectcol,xylabel,ls,lw的用法同plot
 
-*newSubplot(self,number,data,color = 0, label = '', xylabel = [],ls='-',lw=1)*:绘制含有新数据的分图，当需要在某个子图中绘制类对象中为存储的数据是可用。
+*newSubplot(self,number,data,color = 0, label = '', xylabel = [],ls='-',lw=1)*:绘制含有新数据的分图，当需要在某个子图中绘制类对象中未存储的数据时是可用。
