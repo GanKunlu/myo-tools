@@ -2,7 +2,6 @@ from myo import init, Hub, Feed, StreamEmg
 import time
 import numpy as np
 
-	
 def GetDegreeFromACC(ACCs):
 	R = 0
 	angle=[]
