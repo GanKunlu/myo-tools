@@ -66,31 +66,6 @@ class Muscle_Tendon:
 		funP_l = 0.000065*np.exp(6.47*l_normal)
 		self.force = (funA_l * activition + funP_l)*self.max_force[self.flag]*np.cos(self.theta)
 	
-'''
-#plot musle length
-
-Biceps = Muscle_Tendon(np.array([0.031,0.29,0,1]),np.array([0.027,-0.03,0, 1]),flag = 1)
-Biceps1 = Muscle_Tendon(np.array([0.031,0.32,0,1]),np.array([0.027,-0.03,0, 1]),flag = 0)
-p1 = np.arange(0,1.7453,0.02)
-Biceps_length = []
-Biceps_length1 = []
-for angle in p1:
-	p = angle
-	Biceps.Calculate_MTlength()
-	Biceps1.Calculate_MTlength()
-	Biceps_length.append(Biceps.MT_length)
-	Biceps_length1.append(Biceps1.MT_length)
-	
-
-plt.plot(p1/np.pi*180, np.array(Biceps_length),label="$Biceps musle-tendon length$")
-plt.plot(p1/np.pi*180,np.array(Biceps_length1),label="$Ticeps musle-tendon length$")
-plt.legend()
-plt.xlabel("Angle(Rad)")
-plt.ylabel("length(m)")
-plt.show()
-'''
-
-
 
 #plot musle force
 
