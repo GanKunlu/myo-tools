@@ -35,11 +35,11 @@ selectChan = ['Raw-c0','Raw-c5','Raw-c7']
 
 
 for i in range(len(selectChan)):
-	featplot.newSubplot(431+i, rawFrame[selectChan[i]],xylabel=[u'²ÉÑùµã',selectChan[i]])
-	#plt.title('ÌâÄ¿',fontproperties='SimHei')
+	featplot.newSubplot(431+i, rawFrame[selectChan[i]],xylabel=[u'é‡‡æ ·ç‚¹',selectChan[i]])
+	#plt.title('ÃŒÃ¢Ã„Â¿',fontproperties='SimHei')
 	
 for j in range(len(selectFeat)):
-	featplot.subplot([4,3,4+j], [selectFeat[j]], xylabel=[u'²ÉÑùµã',selectFeat[j]])
+	featplot.subplot([4,3,4+j], [selectFeat[j]], xylabel=[u'é‡‡æ ·ç‚¹',selectFeat[j]])
 	
 plt.show()
 
