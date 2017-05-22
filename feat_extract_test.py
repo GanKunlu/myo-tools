@@ -5,8 +5,10 @@ import os
 import matplotlib.pyplot as plt
 # load FilesReader and FeatureExtractor class
 path = os.getcwd()+"\data"
-print(path)
-reader = FilesReader(8,path)
+column = 8 	#The column of every file
+gestureSize = 60
+windowsSize = 10 
+reader = FilesReader(column,path)
 extractor = FeatureExtractor(reader.fileNumber, 60, 10)
 # init Mat:
 feats = np.array([])
