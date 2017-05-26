@@ -4,12 +4,12 @@ from tools.featureExtract import FeatureExtractor
 import os
 import matplotlib.pyplot as plt
 # load FilesReader and FeatureExtractor class
-path = os.getcwd()+"\data"
+path = os.getcwd() + "\data"
 column = 8 	#The column of every file
 gestureSize = 60
 windowsSize = 10 
-reader = FilesReader(column,path)
-extractor = FeatureExtractor(reader.fileNumber, 60, 10)
+reader = FilesReader(column, path)
+extractor = FeatureExtractor(reader.fileNumber, gestureSize, windowsSize)
 # init Mat:
 feats = np.array([])
 labels = np.array([])
@@ -26,7 +26,7 @@ for classIndex, fileName in enumerate(reader.files):
 		RMSfeat = extractor.RMSfeat(seg)
 		ZCfeat = extractor.ZCfeat(seg)
 		ARCfeat = extractor.ARCfeat(seg)
-		featVector = np.hstack((RMSfeat,ZCfeat,ARCfeat))
+		featVector = np.hstack((RMSfeat, ZCfeat, ARCfeat))
 		# feats splice:
 		featMat = extractor.dynamicSplice(featMat, featVector, segIndex)
 	# generate labels:
