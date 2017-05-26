@@ -46,10 +46,10 @@ class Muscle_Tendon:
 	def Calculate_MTlength(self):
 		_R = np.array([ [np.cos(p),-np.sin(p),    0,   0],
 						[np.sin(p), np.cos(p),    0,   0],
-						[	     0,	        0,	  1,   0],
-						[		 0,	        0, 	  0,   1] ])
+						[	 0,	    0,	  1,   0],
+						[        0,	    0, 	  0,   1]])
 		p_0 = self.alpha_coordi
-		p_e	= self.end_coordi
+		p_e = self.end_coordi
 		P_i = np.dot(_R,p_e)
 		l_mt = P_i - p_0
 		if self.flag == 0:
