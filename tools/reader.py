@@ -49,7 +49,7 @@ class FilesReader(object):
 	def loadFile(self,fileName):
 		file = open(self.path +'/'+fileName,'r')
 		# match the data in file.read()
-		matchList = re.findall(r'[0-9.-]+',file.read())
+		matchList = re.findall(r'[0-9e.-]+',file.read())
 		tempMat = np.array(matchList,dtype = 'float')
 		# calculate the length of the file
 		fileLength = len(tempMat)/self.columns
