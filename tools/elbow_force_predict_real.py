@@ -42,7 +42,7 @@ class Muscle_Tendon:
 		iir_b,iir_a = signal.iirfilter(2, Wn=0.2, rp=5, rs=60, btype='lowpass', ftype='ellip')
 		U_t = signal.lfilter(iir_b,iir_a, np.abs(EMG))
 		U_t[U_t<0] = 0
-		self.activition = sum((np.exp(A*R*U_t)-1)/(np.exp(-2.5)-1))/15
+		self.activition = 0.2*self.activition + 0.8*sum((np.exp(A*R*U_t)-1)/(np.exp(-2.5)-1))/15
 		
 		
 	def Calculate_MTlength(self,p):
